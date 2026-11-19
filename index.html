@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SyllaBot — Your Syllabus, Answered</title>
+  <meta name="description" content="SyllaBot is an AI syllabus assistant that answers questions about due dates, grading and office hours across all your courses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a class="logo" href="index.html"><span class="logo-dot">S</span>SyllaBot</a>
+      <div class="nav-links">
+        <a href="#features" class="hide-sm">Features</a>
+        <a href="#planner" class="hide-sm">Planner</a>
+        <a href="how-it-works.html">How It Works</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO with AI-generated video (autoplay + loop) -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">AI Syllabus Assistant</span>
+        <h1>Four syllabi.<br /><span>One place to ask.</span></h1>
+        <p class="lead">Stop digging through PDFs. SyllaBot answers questions about deadlines, grading, late policies and office hours, and always tells you which class the answer came from.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="how-it-works.html">See How It Works →</a>
+          <a class="btn btn-ghost" href="#" data-open-chat>Try the Chatbot</a>
+        </div>
+      </div>
+      <div class="video-frame">
+        <video autoplay muted loop playsinline preload="auto" aria-label="AI-generated video of a student using SyllaBot">
+          <source src="video.mp4" type="video/mp4" />
+        </video>
+        <span class="video-tag">AI-generated video</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Built for the busiest semester you've had</h2>
+        <p>Every course has its own syllabus, its own deadlines and its own rules. SyllaBot reads all of them so you don't have to.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="icon">⚡</div>
+          <h3>Instant answers</h3>
+          <p>Ask "When is the Class 3 Lab due?" and get the date in seconds, not after ten minutes of scrolling.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon">🎯</div>
+          <h3>Always cites the class</h3>
+          <p>Every answer names the course it came from, so you never mix up one professor's late policy with another's.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon">🛡️</div>
+          <h3>No guessing</h3>
+          <p>If it isn't in a syllabus, SyllaBot says so and points you to your professor instead of making something up.</p>
+        </div>
+      </div>
+      <div class="reveal" style="margin-top:36px">
+        <p style="color:var(--muted);font-weight:600;margin-bottom:10px">Trained on the Fall 2026 syllabi for:</p>
+        <div class="courses">
+          <span class="chip">ITOM 6267</span>
+          <span class="chip">MKTG 6247</span>
+          <span class="chip">ITOM 6268</span>
+          <span class="chip">ITOM 6216</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- X-FACTOR: Deadline Countdown Planner -->
+  <section id="planner">
+    <div class="wrap">
+      <div class="planner reveal">
+        <div class="section-head">
+          <span class="eyebrow">New</span>
+          <h2>Deadline Countdown Planner</h2>
+          <p>Found a due date with SyllaBot? Drop it here and watch the clock. Your list is sorted by urgency and saved in this browser.</p>
+        </div>
+        <div class="planner-grid">
+          <form id="task-form">
+            <div>
+              <label for="t-title">Assignment or exam</label>
+              <input id="t-title" required maxlength="60" placeholder="e.g. Lab 5 – Website" />
+            </div>
+            <div>
+              <label for="t-course">Course</label>
+              <select id="t-course">
+                <option>ITOM 6267</option>
+                <option>MKTG 6247</option>
+                <option>ITOM 6268</option>
+                <option>ITOM 6216</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="t-date">Due date &amp; time</label>
+              <input id="t-date" type="datetime-local" required />
+            </div>
+            <button class="btn btn-accent" type="submit" style="justify-content:center">+ Add to countdown</button>
+          </form>
+          <div>
+            <div class="planner-stats" id="stats"></div>
+            <ul class="task-list" id="task-list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA to second page -->
+  <section>
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div>
+          <h2 style="margin-bottom:6px">Curious how SyllaBot was built?</h2>
+          <p>The problem it solves, how it was trained and what it can answer.</p>
+        </div>
+        <a class="btn btn-accent" href="how-it-works.html">Learn How It Works →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="xfactor-note">
+        <h3>✨ X-Factor: Deadline Countdown Planner</h3>
+        <p>Add any assignment or exam from your syllabi and it builds a live, auto-sorted countdown. Color bars flag what's urgent (red, under 3 days), coming soon (amber) or later (green). Tasks save in your browser, so your list is waiting next visit.</p>
+      </div>
+      <p style="margin-top:24px">© 2026 SyllaBot · A Generative AI for Business student project · Chatbot powered by Chatling</p>
+    </div>
+  </footer>
+
+  <script>
+  // Deadline Countdown Planner
+  (function () {
+    var KEY = "syllabot-tasks";
+    var list = document.getElementById("task-list");
+    var stats = document.getElementById("stats");
+    var form = document.getElementById("task-form");
+
+    function load() {
+      try {
+        var raw = localStorage.getItem(KEY);
+        if (raw) return JSON.parse(raw);
+      } catch (e) {}
+      // First visit: a few example tasks so the planner isn't empty
+      var now = Date.now(), day = 864e5;
+      return [
+        { id: 1, title: "Example: Lab 5 – Website", course: "ITOM 6216", due: now + 2 * day },
+        { id: 2, title: "Example: Marketing case write-up", course: "MKTG 6247", due: now + 6 * day },
+        { id: 3, title: "Example: Consulting project milestone", course: "ITOM 6268", due: now + 15 * day }
+      ];
+    }
+    var tasks = load();
+    function save() { try { localStorage.setItem(KEY, JSON.stringify(tasks)); } catch (e) {} }
+
+    function fmt(ms) {
+      if (ms <= 0) return "Past due";
+      var s = Math.floor(ms / 1000);
+      var d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+      if (d > 0) return d + "d " + h + "h " + m + "m";
+      return h + "h " + String(m).padStart(2, "0") + "m " + String(sec).padStart(2, "0") + "s";
+    }
+    function esc(t) { var d = document.createElement("div"); d.textContent = t; return d.innerHTML; }
+
+    function render() {
+      var now = Date.now();
+      tasks.sort(function (a, b) { return a.due - b.due; });
+      if (!tasks.length) {
+        list.innerHTML = '<li class="empty">No deadlines yet. Add one to start the countdown.</li>';
+      } else {
+        list.innerHTML = tasks.map(function (t) {
+          var left = t.due - now, cls = left <= 0 ? "past" : left < 3 * 864e5 ? "urgent" : left < 7 * 864e5 ? "soon" : "later";
+          var when = new Date(t.due).toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+          return '<li class="task ' + cls + '"><span class="bar"></span>' +
+            '<div><div class="t-title">' + esc(t.title) + '</div><div class="t-course">' + esc(t.course) + ' · due ' + when + '</div></div>' +
+            '<div class="t-count" data-due="' + t.due + '">' + fmt(left) + '</div>' +
+            '<button class="t-del" data-id="' + t.id + '" aria-label="Remove">✕</button></li>';
+        }).join("");
+      }
+      var upcoming = tasks.filter(function (t) { return t.due > now; });
+      var urgent = upcoming.filter(function (t) { return t.due - now < 3 * 864e5; }).length;
+      var week = upcoming.filter(function (t) { return t.due - now < 7 * 864e5; }).length;
+      stats.innerHTML = '<div class="stat"><b>' + upcoming.length + '</b>upcoming</div>' +
+        '<div class="stat"><b>' + week + '</b>due this week</div>' +
+        '<div class="stat"><b>' + urgent + '</b>urgent</div>';
+    }
+
+    function tick() {
+      var now = Date.now();
+      list.querySelectorAll(".t-count").forEach(function (el) { el.textContent = fmt(+el.dataset.due - now); });
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var due = new Date(document.getElementById("t-date").value).getTime();
+      if (isNaN(due)) return;
+      tasks.push({ id: Date.now(), title: document.getElementById("t-title").value.trim(), course: document.getElementById("t-course").value, due: due });
+      save(); render(); form.reset();
+    });
+    list.addEventListener("click", function (e) {
+      var b = e.target.closest(".t-del"); if (!b) return;
+      tasks = tasks.filter(function (t) { return String(t.id) !== b.dataset.id; });
+      save(); render();
+    });
+
+    render();
+    setInterval(tick, 1000);
+    setInterval(render, 60000);
+  })();
+  </script>
+  <script src="chat.js"></script>
+</body>
+</html>

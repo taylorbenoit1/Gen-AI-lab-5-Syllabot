@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works — SyllaBot</title>
+  <meta name="description" content="How SyllaBot was built: the problem, the training data and what it can answer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a class="logo" href="index.html"><span class="logo-dot">S</span>SyllaBot</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="how-it-works.html" class="active">How It Works</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">How It Works</span>
+      <h1>A study assistant that actually read the syllabus.</h1>
+      <p>SyllaBot is an AI chatbot trained on the Fall 2026 syllabi for four graduate business courses. It turns long PDF documents into a conversation, so finding a due date or grading rule takes seconds.</p>
+    </div>
+  </header>
+
+  <!-- Problem / solution -->
+  <section>
+    <div class="wrap two-col">
+      <div class="prose reveal">
+        <h2>The problem</h2>
+        <p>This semester I'm taking ITOM 6267, MKTG 6247, ITOM 6268 and ITOM 6216. Each course has its own syllabus, often more than 20,000 characters long, with different due dates, grading weights, late policies, office hours and classroom rules.</p>
+        <p>Answering a simple question like "Can I submit this lab a day late?" meant opening the right file, searching for the right section and hoping I was reading the right class's policy. Small mix-ups risk missed deadlines and lost points.</p>
+      </div>
+      <div class="prose reveal">
+        <h2>The solution</h2>
+        <p>SyllaBot gathers all four syllabi in one chatbot. Students ask questions in plain English and get short, clear answers that always name the course they came from.</p>
+        <p>When the answer isn't in a syllabus, SyllaBot says it doesn't know and suggests emailing the professor. It doesn't guess, so students can trust what it tells them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it was built -->
+  <section>
+    <div class="wrap two-col">
+      <div class="reveal">
+        <h2>How it was built</h2>
+        <p style="color:var(--muted)">SyllaBot was built on Chatling, a no-code AI chatbot platform, in four steps.</p>
+      </div>
+      <ol class="steps reveal">
+        <li><strong>Knowledge base</strong><span>All four course syllabi were uploaded as knowledge sources, about 89,000 characters of course information in total.</span></li>
+        <li><strong>Custom instructions</strong><span>The AI is told to answer only from the uploaded syllabi, keep answers short, always cite the class and never invent information.</span></li>
+        <li><strong>Guided conversation flow</strong><span>After a welcome message, students choose a quick topic (Grading Breakdown or Office Hours) or pick "Ask My Own Question."</span></li>
+        <li><strong>Safe fallback</strong><span>If no answer is found, an "Answer Not Found" path suggests emailing the professor and loops back so the student can keep asking.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Example conversation -->
+  <section>
+    <div class="wrap two-col">
+      <div class="reveal">
+        <h2>What you can ask</h2>
+        <p style="color:var(--muted)">Anything that's written in a syllabus. Some favorites:</p>
+        <table>
+          <thead><tr><th>Topic</th><th>Example question</th></tr></thead>
+          <tbody>
+            <tr><td>Deadlines</td><td>When is the Class 3 Lab due for ITOM 6216?</td></tr>
+            <tr><td>Policies</td><td>What is the late assignment policy for ITOM 6216?</td></tr>
+            <tr><td>Grading</td><td>What is the grading breakdown for each of my classes?</td></tr>
+            <tr><td>Contacts</td><td>What are the office hours for each professor?</td></tr>
+            <tr><td>Materials</td><td>What textbooks are required for ITOM 6267?</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="qa reveal">
+        <div class="bubble a">Hi! I'm your syllabus assistant for ITOM 6267, MKTG 6247, ITOM 6268 and ITOM 6216. What would you like to know?</div>
+        <div class="bubble q">What's the late assignment policy for ITOM 6216?</div>
+        <div class="bubble a"><b>ITOM 6216:</b> Here's what the syllabus says about late work… <em>(the live bot quotes the actual policy)</em></div>
+        <div class="bubble q">Does MKTG 6247 have a final exam?</div>
+        <div class="bubble a"><b>MKTG 6247:</b> Every answer starts with the course name, so you always know which syllabus it came from.</div>
+        <a class="btn btn-primary" href="#" data-open-chat style="align-self:flex-start;margin-top:8px">Ask the real chatbot →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who it's for / roadmap -->
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Who it's for, and what's next</h2>
+        <p>SyllaBot started as a personal tool, but the same idea works for any student juggling multiple courses.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="icon">🎓</div>
+          <h3>Students</h3>
+          <p>Fewer missed deadlines, less time searching documents and more confidence about each class's rules.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon">👩‍🏫</div>
+          <h3>Professors</h3>
+          <p>Fewer repetitive "when is this due?" emails, since routine syllabus questions get answered right away.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon">🚀</div>
+          <h3>Next up</h3>
+          <p>Calendar export for due dates, reminder notifications and a version any student can set up by uploading their own syllabi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div>
+          <h2 style="margin-bottom:6px">Ready to stop scrolling through PDFs?</h2>
+          <p>Head back home to try the Deadline Countdown Planner.</p>
+        </div>
+        <a class="btn btn-accent" href="index.html">← Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© 2026 SyllaBot · A Generative AI for Business student project · Chatbot powered by Chatling</div>
+  </footer>
+
+  <script src="chat.js"></script>
+</body>
+</html>
